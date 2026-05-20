@@ -126,3 +126,34 @@
     color: white !important;
     text-transform: lowercase !important;
 }
+/* Remove Chillax logo/text */
+[class*="wordmark"] {
+    font-size: 0 !important;
+}
+
+[class*="wordmark"] svg,
+[class*="wordmark"] img,
+[class*="wordmark"]::before {
+    display: none !important;
+    opacity: 0 !important;
+}
+
+/* Add Zoona logo */
+[class*="wordmark"]::after {
+    content: "zoona" !important;
+
+    position: absolute !important;
+    left: 14px !important;
+    top: 7px !important;
+
+    font-family: Poppins, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    letter-spacing: 3px !important;
+
+    color: white !important;
+    text-transform: lowercase !important;
+
+    display: block !important;
+    opacity: 1 !important;
+}
