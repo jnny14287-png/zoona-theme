@@ -1,53 +1,26 @@
 /**
  * @name Zoona
  * @author King
- * @description Custom Chillax-based Discord theme
  * @version 1.0.0
- */
+ * @description Custom Zoona Discord theme
+*/
 
-/* Zoona theme base */
-@import url("https://warrayquipsome.github.io/Chillax/chillax.css");
+/* Zoona core */
+@import url("https://jnny14287-png.github.io/-zoona-theme/zoona-core.css");
 
 /* Addons */
 @import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Microsoft.css");
 @import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css");
-@import url("https://chillax-org.github.io/Discolored/main.css");
-@import url("https://warrayquipsome.github.io/Chillax/Addons/IconPackEdited.css");
-@import url("https://warrayquipsome.github.io/Chillax/Addons/AvatarOnlyMemberList.css");
-@import url("https://warrayquipsome.github.io/Chillax/Addons/FolderRedesign.css");
 @import url("https://raw.githubusercontent.com/DiscordStyles/RadialStatus/refs/heads/deploy/RadialStatus.css");
-@import url("https://warrayquipsome.github.io/Chillax/Addons/FriendGrid.css");
-@import url("https://warrayquipsome.github.io/Chillax/Addons/ColoredLinks.css");
 
-/* Rename Chillax logo to Zoona */
-[class*="wordmark"] svg {
-    display: none !important;
-}
-
-[class*="wordmark"]::after {
-    content: "zoona";
-    color: #fff;
-    font-family: Poppins, sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: lowercase;
-    position: absolute;
-    left: 10px;
-    top: 6px;
-}
-
-/* Root settings */
+/* Roots */
 :root {
     --background-image: var(--wallpaper);
     --bg-opacity: 100%;
 
     --wallpaper: url("https://media.discordapp.net/attachments/1251715226533892177/1506692561199304854/ghost-in-the-shell-2026-ghost-in-the-shell_1.gif?ex=6a0f304b&is=6a0ddecb&hm=3eebbd3b20cdfebf0b992ed08479b26ebe360f2eec6fc25a0723dec7e19be489&=&width=374&height=200");
 
-    --modern-dark-bg: url("https://warrayquipsome.github.io/Chillax/Wallpapers/modern-dark-bg.png");
-    --modern-light-bg: url("https://warrayquipsome.github.io/Chillax/Wallpapers/modern-light-bg.png");
-
-    --user-name: "King";
+    --user-name: "Z O O N A !";
     --edited-message: " EDITED ✎ ";
     --font-name: Poppins;
     --font-size: 13px;
@@ -57,13 +30,6 @@
     --accentcolorV2: #fb5454;
 
     --memberlist-border-radius: 10px;
-
-    --chillax-input-field: "Life is so much easier when you just take a moment to chill";
-    --chillax-input-field-locked: "Unfortunately, you can't chill in this channel";
-    --chillax-input-typing-indicator-one-person: "is smashing some buttons";
-    --chillax-input-typing-indicator-many-person: "are smashing some buttons";
-
-    --chillax-scroller-color: transparent;
 
     --rs-small-spacing: 0px;
     --rs-large-spacing: 0px;
@@ -80,14 +46,8 @@
     --rs-invisible-color: #636b75;
     --rs-phone-visible: block;
     --rs-phone-color: var(--rs-online-color);
-
-    --chillax-spotify-control-squid-gif-url: url("https://raw.githubusercontent.com/Chillax-ORG/Images/refs/heads/main/Glow_Squid_BE1.gif");
-    --chillax-spotify-control-squid-width: 25px;
-    --chillax-spotify-control-squid-height: 25px;
-    --chillax-spotify-control-squid-glow: rgba(0, 255, 255, 0.4);
 }
 
-/* Dark mode window */
 :root.theme-dark {
     --window-margin: 20px;
     --window-colour: #0009;
@@ -96,7 +56,6 @@
     --sidebar-colour: rgb(36, 36, 36);
 }
 
-/* Light mode window */
 :root.theme-light {
     --window-margin: 20px;
     --window-colour: rgba(255, 255, 255, 0.6);
@@ -105,7 +64,6 @@
     --sidebar-colour: rgb(209, 209, 209);
 }
 
-/* Discord transparency dark */
 .theme-dark {
     --background-message-hover: rgba(255, 255, 255, 0.055);
     --header-primary: #fff;
@@ -125,7 +83,6 @@
     --deprecated-panel-background: transparent;
 }
 
-/* Discord transparency light */
 .theme-light {
     --background-message-hover: rgba(255, 255, 255, 0.055);
     --header-primary: rgb(0, 0, 0);
@@ -143,4 +100,29 @@
     --background-accent: rgb(27, 27, 27);
     --activity-card-background: transparent;
     --deprecated-panel-background: transparent;
+}
+
+/* Replace top-left logo */
+[class*="wordmark"] {
+    font-size: 0 !important;
+}
+
+[class*="wordmark"] svg,
+[class*="wordmark"] img,
+[class*="wordmark"]::before {
+    display: none !important;
+    opacity: 0 !important;
+}
+
+[class*="wordmark"]::after {
+    content: "zoona" !important;
+    position: absolute !important;
+    left: 12px !important;
+    top: 7px !important;
+    font-family: Poppins, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    letter-spacing: 3px !important;
+    color: white !important;
+    text-transform: lowercase !important;
 }
