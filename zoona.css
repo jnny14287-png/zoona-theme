@@ -113,46 +113,37 @@
     opacity: 0 !important;
 }
 
-[class*="wordmark"]::after {
-    content: "zoona" !important;
-    position: absolute !important;
-    left: 12px !important;
-    top: 7px !important;
-    font-family: Poppins, sans-serif !important;
-    font-size: 14px !important;
-    font-weight: 700 !important;
-    letter-spacing: 3px !important;
-    color: white !important;
-    text-transform: lowercase !important;
+/* NUCLEAR WORDMARK OVERRIDE */
+
+[class*="wordmark"] * {
+    display: none !important;
 }
-/* Remove Chillax logo/text */
+
+[class*="wordmark"]::before,
+[class*="wordmark"]::after {
+    display: none !important;
+}
+
 [class*="wordmark"] {
+    position: relative !important;
     font-size: 0 !important;
 }
 
-[class*="wordmark"] svg,
-[class*="wordmark"] img,
-[class*="wordmark"]::before {
-    display: none !important;
-    opacity: 0 !important;
-}
-/* FORCE REMOVE CHILLAX WORDMARK */
-[class*="wordmarkWindows"] svg {
-    display: none !important;
-}
-
-[class*="wordmarkWindows"]::after {
+[class*="wordmark"]::after {
     content: "zoona" !important;
+
+    display: block !important;
+    opacity: 1 !important;
+
+    position: absolute !important;
+    top: 6px !important;
+    left: 12px !important;
+
     color: white !important;
     font-size: 14px !important;
     font-family: Poppins, sans-serif !important;
     font-weight: 700 !important;
     letter-spacing: 3px !important;
 
-    position: absolute !important;
-    left: 12px !important;
-    top: 6px !important;
-
-    display: block !important;
-    opacity: 1 !important;
+    z-index: 999999 !important;
 }
